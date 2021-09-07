@@ -1,6 +1,7 @@
-# Powering prediction & validation
+# Powering prediction
 
-## Passenger ship powering prediction web application using Deep Learning model
+## Passenger ship powering prediction web application Scikit-learn, FastAPI, Redis and Docker
+
 
 ## Getting started
 
