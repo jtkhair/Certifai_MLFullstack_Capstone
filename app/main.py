@@ -7,7 +7,9 @@ Deployment is based on pretrained model developed using scikit learn
 
 # %%
 
-from fastapi import FastAPI, File, UploadFile
+from fastapi import FastAPI, File, UploadFile, Form
+from fastapi.responses import FileResponse
+from io import StringIO
 import logging
 import pandas as pd
 import pickle
@@ -29,13 +31,29 @@ logger.setLevel(logging.DEBUG)
 logging.basicConfig(level=logging.DEBUG, filename="logs.log")
 
 model = pickle.load(open("model/mlp_pwr_best_model.sav", 'rb'))
+scaler = pickle.load(open("model/scaler_pwr.sav", 'rb'))
+
+
+# some_file_path = ""
+#
+#
+# @app.get("/")
+# async def main():
+#     return FileResponse(some_file_path)
+
+
+@app.post("/uploadfile/")
+async def create_upload_file(file: UploadFile = File(...)):
+    df = pd.read_csv(StringIO(str(file.file.read(), "utf-8")), encoding="utf-8")
+    return {"filename": file.filename}
 
 
 @app.get('/')
 def get_root():
     return {'message': 'Welcome to the passenger ship powering prediction API'}
 
-# @api.post("/predict")
+# @app.post("/predict")
+# async def get_prediction():
 
 # # preprocessing
 # dataset_scaled = scaler.fit_transform(df)
@@ -54,6 +72,7 @@ def get_root():
 # print('Test score:', model.score(X, y))
 
 # save to file
+# df_output.to_csv("data/output.csv", index=False)
 
 # return()
 
@@ -62,4 +81,3 @@ def get_root():
 # # Load data
 # df = pd.read_csv("../../Data/MonoROPAX_Training.csv").drop(['ID', 'D', 'Npax', 'Nveh', 'GT'], 1)
 #
-
