@@ -6,10 +6,13 @@ Deployment is based on pretrained model developed using scikit learn
 """
 
 # %%
+import codecs
+import csv
 
 from fastapi import FastAPI, File, UploadFile, Form
 from fastapi.responses import FileResponse
 from io import StringIO
+import json
 import logging
 import pandas as pd
 import pickle
@@ -17,6 +20,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn import metrics
 from sklearn.preprocessing import MinMaxScaler
+from typing import Optional
 import matplotlib.pyplot as plt
 
 scaler = MinMaxScaler()
@@ -44,8 +48,12 @@ scaler = pickle.load(open("model/scaler_pwr.sav", 'rb'))
 
 @app.post("/uploadfile/")
 async def create_upload_file(file: UploadFile = File(...)):
-    df = pd.read_csv(StringIO(str(file.file.read(), "utf-8")), encoding="utf-8")
-    return {"filename": file.filename}
+    # df = pd.read_csv(StringIO(str(file.file.read(), "utf-8")), encoding="utf-8")
+    data = csv.reader(codecs.iterdecode(file.file, "utf-8"), delimiter='\t')
+    header = data.__next__()
+    df = pd.DataFrame(data, columns=header, index=None)
+    return df
+    # return {"filename": file.filename}
 
 
 @app.get('/')
