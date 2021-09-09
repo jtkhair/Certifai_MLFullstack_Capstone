@@ -6,10 +6,14 @@ Deployment is based on pretrained model developed using scikit learn
 """
 
 # %%
+from fastapi.templating import Jinja2Templates
+from starlette.requests import Request
+from fastapi.responses import HTMLResponse
+from io import StringIO
 import codecs
 import csv
-
 from fastapi import FastAPI, File, UploadFile, Form
+from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from io import StringIO
 import json
@@ -27,33 +31,64 @@ scaler = MinMaxScaler()
 
 # %%
 
+# app configuration
 app = FastAPI(title="Passenger Ship Powering Prediction",
               description="API for passenger ship powering prediction using Deep Learning")
 
+# css folder
+app.mount(
+    "/static",
+    StaticFiles(directory="../static"),
+    name="static")
+
+# mount jinja template
+templates = Jinja2Templates(directory="../templates")
+
+# Log setup
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
 logging.basicConfig(level=logging.DEBUG, filename="logs.log")
 
-model = pickle.load(open("model/mlp_pwr_best_model.sav", 'rb'))
-scaler = pickle.load(open("model/scaler_pwr.sav", 'rb'))
+# load model/scaler
+model = pickle.load(open("../model/mlp_pwr_best_model.sav", 'rb'))
+scaler = pickle.load(open("../model/scaler_pwr.sav", 'rb'))
 
 
-# some_file_path = ""
-#
-#
-# @app.get("/")
-# async def main():
-#     return FileResponse(some_file_path)
 
+# home page
+@app.get("/", response_class=HTMLResponse)
+async def main(request: Request):
+    return templates.TemplateResponse("home.html", {"request": request})
 
 @app.post("/uploadfile/")
 async def create_upload_file(file: UploadFile = File(...)):
-    # df = pd.read_csv(StringIO(str(file.file.read(), "utf-8")), encoding="utf-8")
-    data = csv.reader(codecs.iterdecode(file.file, "utf-8"), delimiter='\t')
-    header = data.__next__()
-    df = pd.DataFrame(data, columns=header, index=None)
-    return df
-    # return {"filename": file.filename}
+    # only accept csv
+    if file.filename.split(".")[-1] != "csv":
+        return {"error": "undefined file extension"}
+    else:
+        # return byte
+        raw_data = await file.read()
+
+        # byte to str
+        str_data = str(raw_data,'utf-8')
+
+        # prepare string as input for pandas
+        prep_data = StringIO(str_data)
+
+        # create df
+        df = pd.read_csv(prep_data)
+
+        '''
+        all your processes will be here :)
+        '''
+
+        return HTMLResponse(df.to_html())
+        # df = pd.read_csv(StringIO(str(file.file.read(), "utf-8")), encoding="utf-8")
+        # data = csv.reader(codecs.iterdecode(file.file, "utf-8"), delimiter='\t')
+        # header = data.__next__()
+        # df = pd.DataFrame(data, columns=header, index=None)
+        # return df
+        # return {"filename": file.filename}
 
 
 @app.get('/')
