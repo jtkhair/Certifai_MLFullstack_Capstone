@@ -4,7 +4,7 @@
 
 
 ## Getting started
-Before running this web app, make sure to run the command git pull (if you already cloned this repo)
+Before running this web app, make sure to run the command git pull (if you already cloned this repo). <br/>
 In your directory(the cloned repo) run this command at terminal:
 ```
 git pull
