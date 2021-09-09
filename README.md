@@ -1,6 +1,6 @@
 # Powering prediction
 
-## Passenger ship powering prediction web application Scikit-learn, FastAPI, Redis and Docker
+## Passenger ship powering prediction web application Scikit-learn, FastAPI and Docker
 
 
 ## Getting started
