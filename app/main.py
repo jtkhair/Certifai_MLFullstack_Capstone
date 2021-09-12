@@ -77,18 +77,30 @@ async def create_upload_file(request: Request, file: UploadFile = File(...)):
         # create df
         df = pd.read_csv(prep_data)
 
-        # html table
-        table = df.to_html(justify="center", index=None, classes=["table", "table-hover"])
+        # html table from df
+        main_table = df.to_html(justify="center", index=None, classes=["table", "table-hover"])
+
+        # alternative way for better control on html table
+        alt_table = df.values.tolist()
+        alt_header = df.columns
+    
 
         # sample graph
         graph_data = df[['Vs','P']].values.tolist()
         graph_data.insert(0,["Vs", "P"])
-        
+
         '''
         all your processes will be here :)
         '''
 
-        return templates.TemplateResponse("home_copy.html", {"request": request, "table": table, "graph_data": graph_data})
+        return templates.TemplateResponse("home_copy.html", 
+            {
+                "request": request,
+                "main_table": main_table,
+                "graph_data": graph_data,
+                "alt_table":alt_table,
+                "alt_header":alt_header
+            })
 
 
 # @app.post("/predict")
