@@ -76,24 +76,20 @@ async def create_upload_file(request: Request, file: UploadFile = File(...)):
 
         # create df
         df = pd.read_csv(prep_data)
+
+        # html table
         table = df.to_html(justify="center", index=None, classes=["table", "table-hover"])
 
+        # sample graph
+        graph_data = df[['Vs','P']].values.tolist()
+        graph_data.insert(0,["Vs", "P"])
+        
         '''
         all your processes will be here :)
         '''
 
-        return templates.TemplateResponse("home_copy.html", {"request": request, "df": df, "table": table})
-        # df = pd.read_csv(StringIO(str(file.file.read(), "utf-8")), encoding="utf-8")
-        # data = csv.reader(codecs.iterdecode(file.file, "utf-8"), delimiter='\t')
-        # header = data.__next__()
-        # df = pd.DataFrame(data, columns=header, index=None)
-        # return df
-        # return {"filename": file.filename}
+        return templates.TemplateResponse("home_copy.html", {"request": request, "table": table, "graph_data": graph_data})
 
-
-@app.get('/')
-def get_root():
-    return {'message': 'Welcome to the passenger ship powering prediction API'}
 
 # @app.post("/predict")
 # async def get_prediction():
