@@ -54,14 +54,13 @@ model = pickle.load(open("../model/mlp_pwr_best_model.sav", 'rb'))
 scaler = pickle.load(open("../model/scaler_pwr.sav", 'rb'))
 
 
-
 # home page
 @app.get("/", response_class=HTMLResponse)
 async def main(request: Request):
     return templates.TemplateResponse("home.html", {"request": request})
 
 @app.post("/uploadfile/")
-async def create_upload_file(file: UploadFile = File(...)):
+async def create_upload_file(request: Request, file: UploadFile = File(...)):
     # only accept csv
     if file.filename.split(".")[-1] != "csv":
         return {"error": "undefined file extension"}
@@ -82,7 +81,7 @@ async def create_upload_file(file: UploadFile = File(...)):
         all your processes will be here :)
         '''
 
-        return HTMLResponse(df.to_html())
+        return templates.TemplateResponse("home_copy.html", {"request": request, "df": df})
         # df = pd.read_csv(StringIO(str(file.file.read(), "utf-8")), encoding="utf-8")
         # data = csv.reader(codecs.iterdecode(file.file, "utf-8"), delimiter='\t')
         # header = data.__next__()
