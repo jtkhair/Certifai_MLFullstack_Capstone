@@ -76,12 +76,13 @@ async def create_upload_file(request: Request, file: UploadFile = File(...)):
 
         # create df
         df = pd.read_csv(prep_data)
+        table = df.to_html(justify="center", index=None, classes=["table", "table-hover"])
 
         '''
         all your processes will be here :)
         '''
 
-        return templates.TemplateResponse("home_copy.html", {"request": request, "df": df})
+        return templates.TemplateResponse("home_copy.html", {"request": request, "df": df, "table": table})
         # df = pd.read_csv(StringIO(str(file.file.read(), "utf-8")), encoding="utf-8")
         # data = csv.reader(codecs.iterdecode(file.file, "utf-8"), delimiter='\t')
         # header = data.__next__()
