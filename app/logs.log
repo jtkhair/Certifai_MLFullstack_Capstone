@@ -801,3 +801,1105 @@ DEBUG:multipart.multipart:Calling on_part_data with data[165:1386]
 DEBUG:multipart.multipart:Calling on_part_data with data[0:2]
 DEBUG:multipart.multipart:Calling on_part_end with no data
 DEBUG:multipart.multipart:Calling on_end with no data
+INFO:uvicorn.error:Started server process [11044]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:121]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[123:135]
+DEBUG:multipart.multipart:Calling on_header_value with data[137:161]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[165:1386]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:2]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+ERROR:uvicorn.error:Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 373, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\fastapi\applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\fastapi\routing.py", line 226, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\fastapi\routing.py", line 159, in run_endpoint_function
+    return await dependant.call(**values)
+  File "D:\User\jkhair\IdeaProjects\Certifai\MLCapstone\app\.\main.py", line 81, in create_upload_file
+    main_table = df.to_html(max_row=5, justify="center", index=None, classes=["table", "table-hover"])
+TypeError: to_html() got an unexpected keyword argument 'max_row'
+INFO:uvicorn.error:Started server process [22916]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:121]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[123:135]
+DEBUG:multipart.multipart:Calling on_header_value with data[137:161]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[165:1386]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:2]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+INFO:uvicorn.error:Started server process [19636]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:121]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[123:135]
+DEBUG:multipart.multipart:Calling on_header_value with data[137:161]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[165:1386]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:2]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:121]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[123:135]
+DEBUG:multipart.multipart:Calling on_header_value with data[137:161]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[165:1386]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:2]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:121]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[123:135]
+DEBUG:multipart.multipart:Calling on_header_value with data[137:161]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[165:1386]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:2]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:121]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[123:135]
+DEBUG:multipart.multipart:Calling on_header_value with data[137:161]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[165:1386]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:2]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:121]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[123:135]
+DEBUG:multipart.multipart:Calling on_header_value with data[137:161]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[165:1386]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:2]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:121]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[123:135]
+DEBUG:multipart.multipart:Calling on_header_value with data[137:161]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[165:1386]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:2]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+INFO:uvicorn.error:Started server process [2060]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:121]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[123:135]
+DEBUG:multipart.multipart:Calling on_header_value with data[137:161]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[165:1386]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:2]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+ERROR:uvicorn.error:Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 373, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\fastapi\applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\fastapi\routing.py", line 226, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\fastapi\routing.py", line 159, in run_endpoint_function
+    return await dependant.call(**values)
+  File "D:\User\jkhair\IdeaProjects\Certifai\MLCapstone\app\.\main.py", line 99, in create_upload_file
+    "main_table": main_table,
+NameError: name 'main_table' is not defined
+INFO:uvicorn.error:Started server process [5960]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:121]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[123:135]
+DEBUG:multipart.multipart:Calling on_header_value with data[137:161]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[165:1386]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:2]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:121]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[123:135]
+DEBUG:multipart.multipart:Calling on_header_value with data[137:161]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[165:1386]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:2]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+INFO:uvicorn.error:Started server process [22132]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:121]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[123:135]
+DEBUG:multipart.multipart:Calling on_header_value with data[137:161]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[165:1386]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:2]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:121]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[123:135]
+DEBUG:multipart.multipart:Calling on_header_value with data[137:161]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[165:1386]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:2]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:121]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[123:135]
+DEBUG:multipart.multipart:Calling on_header_value with data[137:161]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[165:1386]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:2]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:121]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[123:135]
+DEBUG:multipart.multipart:Calling on_header_value with data[137:161]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[165:1386]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:2]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:121]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[123:135]
+DEBUG:multipart.multipart:Calling on_header_value with data[137:161]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[165:1386]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:2]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:121]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[123:135]
+DEBUG:multipart.multipart:Calling on_header_value with data[137:161]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[165:1386]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:2]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+INFO:uvicorn.error:Started server process [19044]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:121]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[123:135]
+DEBUG:multipart.multipart:Calling on_header_value with data[137:161]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[165:1386]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:2]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:121]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[123:135]
+DEBUG:multipart.multipart:Calling on_header_value with data[137:161]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[165:1386]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:2]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+INFO:uvicorn.error:Started server process [28300]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+INFO:uvicorn.error:Started server process [3876]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:121]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[123:135]
+DEBUG:multipart.multipart:Calling on_header_value with data[137:161]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[165:1386]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:2]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+ERROR:uvicorn.error:Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 373, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\fastapi\applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\fastapi\routing.py", line 226, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\fastapi\routing.py", line 159, in run_endpoint_function
+    return await dependant.call(**values)
+  File "D:\User\jkhair\IdeaProjects\Certifai\MLCapstone\app\.\main.py", line 90, in create_upload_file
+    df_scaled.columns = ['LWL', 'B', 'T', 'L/B', 'B/T', 'Disp', 'CB', 'Vs', 'Fn', 'P']
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\pandas\core\generic.py", line 5500, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas\_libs\properties.pyx", line 70, in pandas._libs.properties.AxisProperty.__set__
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\pandas\core\generic.py", line 766, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\pandas\core\internals\managers.py", line 216, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\pandas\core\internals\base.py", line 57, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 12 elements, new values have 10 elements
+INFO:uvicorn.error:Started server process [16444]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+INFO:uvicorn.error:Started server process [14480]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:121]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[123:135]
+DEBUG:multipart.multipart:Calling on_header_value with data[137:161]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[165:1386]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:2]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+ERROR:uvicorn.error:Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 373, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\fastapi\applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\fastapi\routing.py", line 226, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\fastapi\routing.py", line 159, in run_endpoint_function
+    return await dependant.call(**values)
+  File "D:\User\jkhair\IdeaProjects\Certifai\MLCapstone\app\.\main.py", line 91, in create_upload_file
+    df_scaled.columns = ['LWL', 'B', 'T', 'L/B', 'B/T', 'Disp', 'CB', 'GT', 'Vs', 'Fn', 'P']
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\pandas\core\generic.py", line 5500, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas\_libs\properties.pyx", line 70, in pandas._libs.properties.AxisProperty.__set__
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\pandas\core\generic.py", line 766, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\pandas\core\internals\managers.py", line 216, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\pandas\core\internals\base.py", line 57, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 12 elements, new values have 11 elements
+INFO:uvicorn.error:Started server process [28884]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:121]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[123:135]
+DEBUG:multipart.multipart:Calling on_header_value with data[137:161]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[165:1386]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:2]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+ERROR:uvicorn.error:Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 373, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\fastapi\applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\fastapi\routing.py", line 226, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\fastapi\routing.py", line 159, in run_endpoint_function
+    return await dependant.call(**values)
+  File "D:\User\jkhair\IdeaProjects\Certifai\MLCapstone\app\.\main.py", line 96, in create_upload_file
+    power = model.predict(X)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py", line 1408, in predict
+    y_pred = self._forward_pass_fast(X)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py", line 134, in _forward_pass_fast
+    X = self._validate_data(X, accept_sparse=['csr', 'csc'], reset=False)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\sklearn\base.py", line 437, in _validate_data
+    self._check_n_features(X, reset=reset)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\sklearn\base.py", line 365, in _check_n_features
+    raise ValueError(
+ValueError: X has 10 features, but MLPRegressor is expecting 9 features as input.
+INFO:uvicorn.error:Started server process [26616]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:111]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[113:125]
+DEBUG:multipart.multipart:Calling on_header_value with data[127:151]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[155:1250]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:107]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[109:121]
+DEBUG:multipart.multipart:Calling on_header_value with data[123:147]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[151:1246]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+INFO:uvicorn.error:Started server process [26480]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:107]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[109:121]
+DEBUG:multipart.multipart:Calling on_header_value with data[123:147]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[151:1246]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+INFO:uvicorn.error:Started server process [21208]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:107]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[109:121]
+DEBUG:multipart.multipart:Calling on_header_value with data[123:147]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[151:1246]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+ERROR:uvicorn.error:Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 373, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\fastapi\applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\fastapi\routing.py", line 226, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\fastapi\routing.py", line 159, in run_endpoint_function
+    return await dependant.call(**values)
+  File "D:\User\jkhair\IdeaProjects\Certifai\MLCapstone\app\.\main.py", line 96, in create_upload_file
+    power = model.predict(X)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py", line 1408, in predict
+    y_pred = self._forward_pass_fast(X)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py", line 134, in _forward_pass_fast
+    X = self._validate_data(X, accept_sparse=['csr', 'csc'], reset=False)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\sklearn\base.py", line 437, in _validate_data
+    self._check_n_features(X, reset=reset)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\sklearn\base.py", line 365, in _check_n_features
+    raise ValueError(
+ValueError: X has 10 features, but MLPRegressor is expecting 9 features as input.
+INFO:uvicorn.error:Started server process [17740]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:107]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[109:121]
+DEBUG:multipart.multipart:Calling on_header_value with data[123:147]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[151:1246]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+INFO:uvicorn.error:Started server process [14460]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:107]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[109:121]
+DEBUG:multipart.multipart:Calling on_header_value with data[123:147]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[151:1246]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+ERROR:uvicorn.error:Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 373, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\fastapi\applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\fastapi\routing.py", line 226, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\fastapi\routing.py", line 159, in run_endpoint_function
+    return await dependant.call(**values)
+  File "D:\User\jkhair\IdeaProjects\Certifai\MLCapstone\app\.\main.py", line 96, in create_upload_file
+    power = model.predict(X)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py", line 1408, in predict
+    y_pred = self._forward_pass_fast(X)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py", line 134, in _forward_pass_fast
+    X = self._validate_data(X, accept_sparse=['csr', 'csc'], reset=False)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\sklearn\base.py", line 437, in _validate_data
+    self._check_n_features(X, reset=reset)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\sklearn\base.py", line 365, in _check_n_features
+    raise ValueError(
+ValueError: X has 10 features, but MLPRegressor is expecting 9 features as input.
+INFO:uvicorn.error:Started server process [20860]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:107]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[109:121]
+DEBUG:multipart.multipart:Calling on_header_value with data[123:147]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[151:1246]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+INFO:uvicorn.error:Started server process [16880]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+INFO:uvicorn.error:Started server process [3724]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+INFO:uvicorn.error:Started server process [4288]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:107]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[109:121]
+DEBUG:multipart.multipart:Calling on_header_value with data[123:147]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[151:1246]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+INFO:uvicorn.error:Started server process [26716]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:107]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[109:121]
+DEBUG:multipart.multipart:Calling on_header_value with data[123:147]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[151:1246]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+ERROR:uvicorn.error:Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 373, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\fastapi\applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\fastapi\routing.py", line 226, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\fastapi\routing.py", line 159, in run_endpoint_function
+    return await dependant.call(**values)
+  File "D:\User\jkhair\IdeaProjects\Certifai\MLCapstone\app\.\main.py", line 106, in create_upload_file
+    graph_data = df_output[['Vs','P']].values.tolist()
+IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices
+INFO:uvicorn.error:Started server process [25156]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+INFO:uvicorn.error:Started server process [12036]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:107]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[109:121]
+DEBUG:multipart.multipart:Calling on_header_value with data[123:147]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[151:1246]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+ERROR:uvicorn.error:Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 373, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\fastapi\applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\fastapi\routing.py", line 226, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\fastapi\routing.py", line 159, in run_endpoint_function
+    return await dependant.call(**values)
+  File "D:\User\jkhair\IdeaProjects\Certifai\MLCapstone\app\.\main.py", line 105, in create_upload_file
+    graph_data = df_output[['Vs','P']].values.tolist()
+IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices
+INFO:uvicorn.error:Started server process [19032]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:107]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[109:121]
+DEBUG:multipart.multipart:Calling on_header_value with data[123:147]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[151:1246]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+ERROR:uvicorn.error:Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 373, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\fastapi\applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\fastapi\routing.py", line 226, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\fastapi\routing.py", line 159, in run_endpoint_function
+    return await dependant.call(**values)
+  File "D:\User\jkhair\IdeaProjects\Certifai\MLCapstone\app\.\main.py", line 118, in create_upload_file
+    "graph_data": graph_data
+NameError: name 'graph_data' is not defined
+INFO:uvicorn.error:Started server process [19544]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:107]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[109:121]
+DEBUG:multipart.multipart:Calling on_header_value with data[123:147]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[151:1246]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+ERROR:uvicorn.error:Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 373, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\fastapi\applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\fastapi\routing.py", line 226, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\fastapi\routing.py", line 159, in run_endpoint_function
+    return await dependant.call(**values)
+  File "D:\User\jkhair\IdeaProjects\Certifai\MLCapstone\app\.\main.py", line 112, in create_upload_file
+    return templates.TemplateResponse("home_copy.html",
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\templating.py", line 81, in TemplateResponse
+    return _TemplateResponse(
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\starlette\templating.py", line 27, in __init__
+    content = template.render(context)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "../templates\home_copy.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "../templates\base.html", line 8, in top-level template code
+    {% block graph %}{% endblock %}
+  File "../templates\home_copy.html", line 10, in block 'graph'
+    {{graph_data| tojson}}
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\jinja2\filters.py", line 1673, in do_tojson
+    return htmlsafe_json_dumps(value, dumps=dumps, **kwargs)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\site-packages\jinja2\utils.py", line 736, in htmlsafe_json_dumps
+    dumps(obj, **kwargs)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\jkhai\miniconda3\envs\AIShip_conda\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Undefined is not JSON serializable
+INFO:uvicorn.error:Started server process [26020]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:107]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[109:121]
+DEBUG:multipart.multipart:Calling on_header_value with data[123:147]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[151:1246]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+INFO:uvicorn.error:Started server process [26380]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+INFO:uvicorn.error:Started server process [28512]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:107]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[109:121]
+DEBUG:multipart.multipart:Calling on_header_value with data[123:147]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[151:1246]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+INFO:uvicorn.error:Started server process [17944]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:107]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[109:121]
+DEBUG:multipart.multipart:Calling on_header_value with data[123:147]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[151:1246]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:107]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[109:121]
+DEBUG:multipart.multipart:Calling on_header_value with data[123:147]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[151:1246]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:107]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[109:121]
+DEBUG:multipart.multipart:Calling on_header_value with data[123:147]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[151:952]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:2]
+DEBUG:multipart.multipart:Calling on_part_data with data[954:1246]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+INFO:uvicorn.error:Started server process [25892]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+INFO:uvicorn.error:Started server process [27704]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:107]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[109:121]
+DEBUG:multipart.multipart:Calling on_header_value with data[123:147]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[151:952]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:2]
+DEBUG:multipart.multipart:Calling on_part_data with data[954:1246]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:107]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[109:121]
+DEBUG:multipart.multipart:Calling on_header_value with data[123:147]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[151:952]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:2]
+DEBUG:multipart.multipart:Calling on_part_data with data[954:1246]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+INFO:uvicorn.error:Started server process [6596]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:107]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[109:121]
+DEBUG:multipart.multipart:Calling on_header_value with data[123:147]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[151:952]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:2]
+DEBUG:multipart.multipart:Calling on_part_data with data[954:1246]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+INFO:uvicorn.error:Started server process [15900]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:107]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[109:121]
+DEBUG:multipart.multipart:Calling on_header_value with data[123:147]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[151:952]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:2]
+DEBUG:multipart.multipart:Calling on_part_data with data[954:1246]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+INFO:uvicorn.error:Started server process [11796]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+INFO:uvicorn.error:Started server process [12988]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+INFO:uvicorn.error:Started server process [20896]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:107]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[109:121]
+DEBUG:multipart.multipart:Calling on_header_value with data[123:147]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[151:952]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:2]
+DEBUG:multipart.multipart:Calling on_part_data with data[954:1246]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+INFO:uvicorn.error:Started server process [3964]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:107]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[109:121]
+DEBUG:multipart.multipart:Calling on_header_value with data[123:147]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[151:952]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:2]
+DEBUG:multipart.multipart:Calling on_part_data with data[954:1246]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+INFO:uvicorn.error:Started server process [25064]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:107]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[109:121]
+DEBUG:multipart.multipart:Calling on_header_value with data[123:147]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[151:952]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:2]
+DEBUG:multipart.multipart:Calling on_part_data with data[954:1246]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+INFO:uvicorn.error:Started server process [26092]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:107]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[109:121]
+DEBUG:multipart.multipart:Calling on_header_value with data[123:147]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[151:952]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:2]
+DEBUG:multipart.multipart:Calling on_part_data with data[954:1246]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+INFO:uvicorn.error:Started server process [12112]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+DEBUG:multipart.multipart:Calling on_part_begin with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[42:61]
+DEBUG:multipart.multipart:Calling on_header_value with data[63:107]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_header_field with data[109:121]
+DEBUG:multipart.multipart:Calling on_header_value with data[123:147]
+DEBUG:multipart.multipart:Calling on_header_end with no data
+DEBUG:multipart.multipart:Calling on_headers_finished with no data
+DEBUG:multipart.multipart:Calling on_part_data with data[151:952]
+DEBUG:multipart.multipart:Calling on_part_data with data[0:2]
+DEBUG:multipart.multipart:Calling on_part_data with data[954:1246]
+DEBUG:multipart.multipart:Calling on_part_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data

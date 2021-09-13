@@ -78,16 +78,50 @@ async def create_upload_file(request: Request, file: UploadFile = File(...)):
         df = pd.read_csv(prep_data).round(2)
 
         # html table from df
-        main_table = df.to_html(justify="center", index=None, classes=["table", "table-hover"])
+        # main_table = df.to_html(max_rows=5, justify="center", classes=["table", "table-hover"])
 
         # alternative way for better control on html table
-        alt_table = df.values.tolist()
-        alt_header = df.columns
-    
+        input_table = df.values.tolist()
+        input_header = df.columns
+
+        # Preprocess data
+        data_scaled = scaler.transform(df.drop(['D', 'GT'], 1))
+        df_data_scaled = pd.DataFrame(data_scaled, index=df.index)
+        df_data_scaled.columns = ['LWL', 'B', 'T', 'L/B', 'B/T', 'Disp', 'CB', 'Vs', 'Fn', 'P']
+
+        #  Create label
+
+        X = df_data_scaled.drop(['P'], 1)
+        # y = df_data_scaled['P']
+
+        # Infer powering
+
+        predict_P = model.predict(X)
+
+        # merge predicted_P to df
+
+        df_predict_P = X
+        df_predict_P['P'] = predict_P.tolist()
+
+        # inverse scale
+
+        predicted_P = scaler.inverse_transform(df_predict_P)
+        df_predicted_P = pd.DataFrame(predicted_P, index=X.index)
+        df_predicted_P.columns = ['LWL', 'B', 'T', 'L/B', 'B/T', 'Disp', 'CB', 'Vs', 'Fn', 'P']
+
+        # merge inversed P to input file
+
+        df['P'] = df_predicted_P['P']
+        df_output = df.round(2)
+
+        # Output table
+
+        output_table = df_output.values.tolist()
+        output_header = df.columns
 
         # sample graph
-        graph_data = df[['Vs','P']].values.tolist()
-        graph_data.insert(0,["Vs", "P"])
+        graph_data = df_output[['Vs', 'P']].values.tolist()
+        graph_data.insert(0, ['Vs', 'P'])
 
         '''
         all your processes will be here :)
@@ -96,10 +130,12 @@ async def create_upload_file(request: Request, file: UploadFile = File(...)):
         return templates.TemplateResponse("home_copy.html", 
             {
                 "request": request,
-                "main_table": main_table,
-                "graph_data": graph_data,
-                "alt_table":alt_table,
-                "alt_header":alt_header
+                # "main_table": main_table,
+                "input_table": input_table,
+                "input_header": input_header,
+                "output_table": output_table,
+                "output_header": output_header,
+                "graph_data": graph_data
             })
 
 

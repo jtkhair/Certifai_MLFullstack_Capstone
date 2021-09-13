@@ -11,7 +11,7 @@
         );
 
     var options = {
-        title: 'Company Performance',
+        title: 'Predicted Power vs Speeds',
         curveType: 'function',
         legend: { position: 'bottom' }
     };
@@ -46,30 +46,57 @@ Upload file
         </form>
 
         <!-- table -->
-        {{main_table | safe}}
+<!--        <div style="height:300px;overflow:auto">-->
+<!--            {{main_table | safe}}-->
+<!--        </div>-->
+
+        <!-- input table -->
+        <div style="height:250px;overflow:auto">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        {% for item in input_header %}
+                        <th scope="col">{{item}}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for table_item in input_table %}
+                    <tr>
+                        {% for i in table_item %}
+                        <td>{{i}}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
 
         <!-- div to render chart -->
         <div id="curve_chart" style="width: 900px; height: 500px"></div>
 
-        <!-- alt table -->
-        <table class="table table-striped table-hover">
-            <thead>
+        <!-- output table -->
+        <div style="height:250px;overflow:auto">
+            <table class="table table-striped table-hover">
+                <thead>
                 <tr>
-                    {% for item in alt_header %}
+                    {% for item in output_header %}
                     <th scope="col">{{item}}</th>
                     {% endfor %}
                 </tr>
-            </thead>
-            <tbody>
-                {% for table_item in alt_table %}
+                </thead>
+                <tbody>
+                {% for table_item in output_table %}
                 <tr>
                     {% for i in table_item %}
                     <td>{{i}}</td>
                     {% endfor %}
                 </tr>
                 {% endfor %}
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+        </div>
+
 
 
     </div>
