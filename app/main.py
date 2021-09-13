@@ -75,7 +75,7 @@ async def create_upload_file(request: Request, file: UploadFile = File(...)):
         prep_data = StringIO(str_data)
 
         # create df
-        df = pd.read_csv(prep_data)
+        df = pd.read_csv(prep_data).round(2)
 
         # html table from df
         main_table = df.to_html(justify="center", index=None, classes=["table", "table-hover"])
