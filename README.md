@@ -14,7 +14,7 @@
     with this program; if not, write to the Free Software Foundation, Inc.,
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.<br>
 
-# Powering Prediction App
+# Passenger Ship Powering Prediction App
 
 ## Passenger ship powering prediction web application with Scikit-learn, Jinja, boostrap and  FastAPI
 
