@@ -49,7 +49,7 @@ logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
 logging.basicConfig(level=logging.DEBUG, filename="logs.log")
 
-# load model/scaler
+# load model & scaler
 model = pickle.load(open("../model/mlp_pwr_best_model.sav", 'rb'))
 scaler = pickle.load(open("../model/scaler_pwr.sav", 'rb'))
 
@@ -77,10 +77,7 @@ async def create_upload_file(request: Request, file: UploadFile = File(...)):
         # create df
         df = pd.read_csv(prep_data).round(2)
 
-        # html table from df
-        # main_table = df.to_html(max_rows=5, justify="center", classes=["table", "table-hover"])
-
-        # alternative way for better control on html table
+        # html table
         input_table = df.values.tolist()
         input_header = df.columns
 
@@ -90,81 +87,42 @@ async def create_upload_file(request: Request, file: UploadFile = File(...)):
         df_data_scaled.columns = ['LWL', 'B', 'T', 'L/B', 'B/T', 'Disp', 'CB', 'Vs', 'Fn', 'P']
 
         #  Create label
-
         X = df_data_scaled.drop(['P'], 1)
         # y = df_data_scaled['P']
 
         # Infer powering
-
         predict_P = model.predict(X)
 
         # merge predicted_P to df
-
         df_predict_P = X
         df_predict_P['P'] = predict_P.tolist()
 
         # inverse scale
-
         predicted_P = scaler.inverse_transform(df_predict_P)
         df_predicted_P = pd.DataFrame(predicted_P, index=X.index)
         df_predicted_P.columns = ['LWL', 'B', 'T', 'L/B', 'B/T', 'Disp', 'CB', 'Vs', 'Fn', 'P']
 
-        # merge inversed P to input file
-
+        # merge scaled P to input file
         df['P'] = df_predicted_P['P']
         df_output = df.round(2)
 
         # Output table
-
         output_table = df_output.values.tolist()
         output_header = df.columns
 
+        # save to file
+        # df_output.to_csv("data/output.csv", index=False)
+
         # sample graph
         graph_data = df_output[['Vs', 'P']].values.tolist()
-        graph_data.insert(0, ['Vs', 'P'])
+        graph_data.insert(0, ['Vs', 'Predicted P'])
 
-        '''
-        all your processes will be here :)
-        '''
-
-        return templates.TemplateResponse("home_copy.html", 
+        return templates.TemplateResponse("Page2.html",
             {
                 "request": request,
-                # "main_table": main_table,
                 "input_table": input_table,
                 "input_header": input_header,
                 "output_table": output_table,
                 "output_header": output_header,
                 "graph_data": graph_data
             })
-
-
-# @app.post("/predict")
-# async def get_prediction():
-
-# # preprocessing
-# dataset_scaled = scaler.fit_transform(df)
-# df_scaled = pd.DataFrame(dataset_scaled, index=df.index)
-# df_scaled.columns = ['LWL', 'B', 'T', 'L/B', 'B/T', 'Disp', 'CB', 'Vs', 'Fn', 'P']
-
-# X = df_scaled.drop(['P'], 1)
-# y = df_scaled['P']
-
-#     prediction_mlp = model.predict(X)
-
-# print('MultiLayer Perceptron Regression (Train-80%, Test-20%)\n')
-# print('MAE:', metrics.mean_absolute_error(y, prediction_mlp))
-# print('MSE:', metrics.mean_squared_error(y, prediction_mlp))
-# print('RMSE:', np.sqrt(metrics.mean_squared_error(y, prediction_mlp)))
-# print('Test score:', model.score(X, y))
-
-# save to file
-# df_output.to_csv("data/output.csv", index=False)
-
-# return()
-
-# %%
-
-# # Load data
-# df = pd.read_csv("../../Data/MonoROPAX_Training.csv").drop(['ID', 'D', 'Npax', 'Nveh', 'GT'], 1)
-#

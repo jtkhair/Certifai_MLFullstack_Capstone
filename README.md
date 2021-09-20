@@ -1,9 +1,16 @@
-# Powering Prediction
+# Powering Prediction App
 
-## Passenger ship powering prediction web application Scikit-learn, FastAPI and Docker
+## Passenger ship powering prediction web application with Scikit-learn, Jinja, boostrap and  FastAPI
 
 
 ## Getting started
+Clone the repo by running this command at the terminal:
+
+```
+git clone 
+```
+
+
 Before running this web app, make sure to run the command git pull (if you already cloned this repo). <br/>
 In your directory(the cloned repo) run this command at terminal:
 ```
@@ -12,7 +19,7 @@ git pull
 
 Install the latest requirements as follows:
 ```
-pip install -r requirements_latest.txt
+pip install -r requirements.txt
 ```
 
 To run the app, simply change the current working directory to app, and run the uvicorn as follows:
