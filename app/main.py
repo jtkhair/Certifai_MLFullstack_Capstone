@@ -16,8 +16,8 @@ GNU General Public License for more details.
 with this program; if not, write to the Free Software Foundation, Inc.,
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.<br>
 
-Web server script that exposes endpoints and pushes ship principal parameter data (csv file) to Redis for passenger
-ship powering by model server. Polls Redis for response from model server.
+Web application that accept ship principal parameter data (csv file) to perform prediction for passenger
+ship powering
 
 Deployment is based on pretrained model developed using scikit learn
 """
