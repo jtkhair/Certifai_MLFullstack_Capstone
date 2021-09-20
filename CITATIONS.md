@@ -6,7 +6,12 @@ and Machine Learning Method". In the International Conference on Design and
 Concurrent Engineering 2021 & Manufacturing System Conference 2021, Sep 2021, Japan
 
 
-@article{maimun2021estimation,
-  title={Estimation of Ship Powering in Preliminary Ship Design Using Graph Theory and Machine Learning Method},
-  author={MAIMUN, Adi and HIEKATA, Kazuo and KHAIRUDDIN, Jauhari and SIOW, Chee Loon and ALI, Arifah},
-  year={2021}
+@inproceedings{khairuddin2020ship,
+  title={Estimation of Ship Powering in Preliminary Ship Design Using Graph Theory 
+and Machine Learning Method},
+  author={Adi Maimun, Hiekata, Kazuo, Khairuddin, J, Siow, CL and Arifah Ali},
+  booktitle={Proceedings of International Conference on Design and 
+Concurrent Engineering 2021 & Manufacturing System Conference 2021},
+  year={2021},
+  organization={JSME}
+}
