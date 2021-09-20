@@ -23,14 +23,14 @@
 1. Clone the repo by running this command at the terminal:
 
 ```
-git clone 
+git clone https://github.com/jtkhair/Certifai_MLFullstack_Capstone
 ```
 
 
 2. Before running this web app, make sure to run the command git pull (if you already cloned this repo). <br/>
 In your directory(the cloned repo) run this command at terminal:
 ```
-git clone https://github.com/jtkhair/Certifai_MLFullstack_Capstone
+git pull https://github.com/jtkhair/Certifai_MLFullstack_Capstone
 ```
 
 3. Install the latest requirements as follows:
