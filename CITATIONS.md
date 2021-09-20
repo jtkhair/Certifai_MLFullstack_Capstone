@@ -1,9 +1,9 @@
 To reference software in publications, please cite both of the following:
 
-Jauhari Khairuddin: "Estimation of Ship Powering in Preliminary Ship Design Using
-Graph Theory and Machine Learning Method". In the International Conference on
-Design and Concurrent Engineering 2021 & Manufacturing System Conference 2021
-, Sep 2021, Japan
+Adi Maimun, Hiekata Kazuo, Jauhari Khairuddin, Siow Chee Loon and Arifah Ali, 
+: "Estimation of Ship Powering in Preliminary Ship Design Using Graph Theory 
+and Machine Learning Method". In the International Conference on Design and 
+Concurrent Engineering 2021 & Manufacturing System Conference 2021, Sep 2021, Japan
 
 
 @article{maimun2021estimation,
