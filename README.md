@@ -38,7 +38,7 @@ git pull https://github.com/jtkhair/Certifai_MLFullstack_Capstone
 pip install -r requirements.txt
 ```
 
-4. To run the app, simply change the current working directory to app, and run the uvicorn as follows:
+4. To run the app, simply change the current working directory to app, and run the uvicorn as follows in the terminal:
 ```
 cd app
 uvicorn main:app --reload
