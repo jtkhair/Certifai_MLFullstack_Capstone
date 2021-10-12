@@ -3,7 +3,8 @@
 ## Introduction
 This web application is developed based on the joint work between the [Marine Technology Centre](http://www.mtc-utm.my/)
 , Universiti Teknologi Malaysia (UTM) and the [Hiekata Laboratory](https://is.edu.k.u-tokyo.ac.jp/top), University of 
-Tokyo (UTokyo). The details of the ship powering prediction modelling is described in the 
+Tokyo (UTokyo) under the UTM research project "Predictive Model for Ship Design and Configuration Using Machine Learning
+- Model Development and Validation". The details of the ship powering prediction modelling is described in the 
 [research paper](https://bit.ly/3mL96kz) presented in the International Conference on Design and Concurrent Engineering 
 2021 & Manufacturing System Conference 2021
 
@@ -56,3 +57,8 @@ Range | 80 - 240 | 15 - 32 | 3 - 8 | 3.5 - 9.0 | 3.0 - 5.5 | 2500 - 32000 | 0.5 
 - Service Speed in kn, Vs
 - Froude Number, Fn
 - Brake KiloWatt Power in kW, P
+
+## Acknowledgement
+> This work is funded by the Universiti Teknologi Malaysia (UTM) under the Research University Grant (RUG).
+Project number: Q.J130000.3851.19J88 and titled: “Predictive Model for Ship Design and Configuration Using Machine
+Learning - Model Development and Validation”
