@@ -26,26 +26,15 @@ Deployment is based on pretrained model developed using scikit learn
 from fastapi.templating import Jinja2Templates
 from starlette.requests import Request
 from fastapi.responses import HTMLResponse
-from io import StringIO
-import codecs
-import csv
-from fastapi import FastAPI, File, UploadFile, Form
+from fastapi import FastAPI, File, UploadFile
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import FileResponse
 from io import StringIO
-import json
 import logging
 import pandas as pd
 import pickle
-import numpy as np
-import matplotlib.pyplot as plt
-from sklearn import metrics
 from sklearn.preprocessing import MinMaxScaler
-from typing import Optional
-import matplotlib.pyplot as plt
 
 scaler = MinMaxScaler()
-
 # %%
 
 # app configuration
@@ -55,11 +44,11 @@ app = FastAPI(title="Passenger Ship Powering Prediction",
 # css folder
 app.mount(
     "/static",
-    StaticFiles(directory="../static"),
+    StaticFiles(directory="./static"),
     name="static")
 
 # mount jinja template
-templates = Jinja2Templates(directory="../templates")
+templates = Jinja2Templates(directory="./templates")
 
 # Log setup
 logger = logging.getLogger()
@@ -67,8 +56,8 @@ logger.setLevel(logging.DEBUG)
 logging.basicConfig(level=logging.DEBUG, filename="logs.log")
 
 # load model & scaler
-model = pickle.load(open("../model/mlp_pwr_best_model.sav", 'rb'))
-scaler = pickle.load(open("../model/scaler_pwr.sav", 'rb'))
+model = pickle.load(open("./model/mlp_pwr_best_model.sav", 'rb'))
+scaler = pickle.load(open("./model/scaler_pwr.sav", 'rb'))
 
 
 # home page
@@ -105,7 +94,6 @@ async def create_upload_file(request: Request, file: UploadFile = File(...)):
 
         #  Create label
         X = df_data_scaled.drop(['P'], 1)
-        # y = df_data_scaled['P']
 
         # Infer powering
         predict_P = model.predict(X)
