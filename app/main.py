@@ -2,10 +2,9 @@
 >
 >**Copyright &copy; 2021 Jauhari Khairuddin**<br>
 >
->This program is free software; you can redistribute it and/or modify
+>This program is free a software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
-the Free Software Foundation; either version 2 of the License, or
-(at your option) any later version.
+the Free Software Foundation; either version 2 of the License, or any later version.
 >
 >This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -15,11 +14,11 @@ GNU General Public License for more details.
 >    You should have received a copy of the GNU General Public License along
 with this program; if not, write to the Free Software Foundation, Inc.,
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.<br>
-
+>
 Web application that accept ship principal parameter data (csv file) to perform prediction for passenger
 ship powering
-
-Deployment is based on pretrained model developed using scikit learn
+>
+Deployment is based on pretrained model developed using scikit learn library
 """
 
 from fastapi.templating import Jinja2Templates
@@ -53,7 +52,6 @@ logging.basicConfig(level=logging.DEBUG, filename="logs.log")
 # load model & scaler
 model = pickle.load(open("./model/mlp_pwr_best_model.sav", 'rb'))
 scaler = pickle.load(open("./model/scaler_pwr.sav", 'rb'))
-
 
 # home page
 @app.get("/", response_class=HTMLResponse)
@@ -109,9 +107,6 @@ async def create_upload_file(request: Request, file: UploadFile = File(...)):
         # Output table
         output_table = df_output.values.tolist()
         output_header = df.columns
-
-        # save to file
-        # df_output.to_csv("data/output.csv", index=False)
 
         # sample graph
         graph_data = df_output[['Vs', 'P']].values.tolist()
