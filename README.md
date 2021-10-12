@@ -1,5 +1,15 @@
 # Passenger ship powering prediction web application with Scikit-learn, Jinja, boostrap, FastAPI and Docker container 
 
+## Introduction
+This web application is developed based on the joint work between the [Marine Technology Centre](http://www.mtc-utm.my/)
+, Universiti Teknologi Malaysia (UTM) and the [Hiekata Laboratory](https://is.edu.k.u-tokyo.ac.jp/top), University of 
+Tokyo (UTokyo). The details of ship powering prediction modelling is described in the 
+[research paper](https://bit.ly/3mL96kz) presented in the International Conference on Design and Concurrent Engineering 
+2021 & Manufacturing System Conference 2021
+
+> _Adi Maimun, Hiekata Kazuo, Jauhari Khairuddin, Siow Chee Loon and Arifah Ali, : "Estimation of Ship Powering in
+> Preliminary Ship Design Using Graph Theory and Machine Learning Method". In the International Conference on Design
+> and Concurrent Engineering 2021 & Manufacturing System Conference 2021, Sep 2021, Japan_
 
 ## Getting started
 1. Clone the repo by running this command in the terminal:
