@@ -4,7 +4,7 @@
 This web application is developed based on the joint work between the [Marine Technology Centre](http://www.mtc-utm.my/)
 , Universiti Teknologi Malaysia (UTM) and the [Hiekata Laboratory](https://is.edu.k.u-tokyo.ac.jp/top), University of 
 Tokyo (UTokyo) under the UTM research project "Predictive Model for Ship Design and Configuration Using Machine Learning
-- Model Development and Validation". The details of the ship powering prediction modelling is described in the 
+: Model Development and Validation". The details of the ship powering prediction modelling is described in the 
 [research paper](https://bit.ly/3mL96kz) presented in the International Conference on Design and Concurrent Engineering 
 2021 & Manufacturing System Conference 2021
 
