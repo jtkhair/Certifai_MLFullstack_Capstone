@@ -22,7 +22,6 @@ ship powering
 Deployment is based on pretrained model developed using scikit learn
 """
 
-# %%
 from fastapi.templating import Jinja2Templates
 from starlette.requests import Request
 from fastapi.responses import HTMLResponse
@@ -32,10 +31,6 @@ from io import StringIO
 import logging
 import pandas as pd
 import pickle
-from sklearn.preprocessing import MinMaxScaler
-
-scaler = MinMaxScaler()
-# %%
 
 # app configuration
 app = FastAPI(title="Passenger Ship Powering Prediction",
