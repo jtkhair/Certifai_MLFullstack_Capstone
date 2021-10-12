@@ -2,7 +2,7 @@
 >
 >**Copyright &copy; 2021 Jauhari Khairuddin**<br>
 >
->This program is free a software; you can redistribute it and/or modify
+>This program is a free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation; either version 2 of the License, or any later version.
 >
