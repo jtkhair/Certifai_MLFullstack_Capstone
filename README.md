@@ -1,36 +1,33 @@
-# Passenger Ship Powering Prediction App
-
-## Passenger ship powering prediction web application with Scikit-learn, Jinja, boostrap and  FastAPI
+# Passenger ship powering prediction web application with Scikit-learn, Jinja, boostrap, FastAPI and Docker container 
 
 
 ## Getting started
-1. Clone the repo by running this command at the terminal:
+1. Clone the repo by running this command in the terminal:
 
 ```
 git clone https://github.com/jtkhair/Certifai_MLFullstack_Capstone
 ```
 
-
-2. Before running this web app, make sure to run the command git pull (if you already cloned this repo). <br/>
-In your directory(the cloned repo) run this command at terminal:
+2. Make sure to run the command git pull (if you already cloned this repo). In the cloned repo directory, run this 
+command in the terminal:
 ```
 git pull https://github.com/jtkhair/Certifai_MLFullstack_Capstone
 ```
 
-3. Install the latest requirements as follows:
+3. Build docker image by running below commands in the terminal (make sure docker is running):
 ```
-pip install -r requirements.txt
-```
-
-4. To run the app, simply change the current working directory to app, and run the uvicorn as follows in the terminal:
-```
-cd app
-uvicorn main:app --reload
+docker build -t aishipwebapp:1.0 .
 ```
 
-5. Go to the link http://127.0.0.1:8000 to use the web app
+4. Run the docker container by running below command in the terminal:
+```
+docker run -d --name aishipwebapp -p 80:80 aishipwebapp:1.0
+```
 
-6. Input dataset *.csv file and click submit to perform the prediction
+5. Go to the link http://127.0.0.1:80 to use the web app
+
+6. Input dataset *.csv file and click submit to perform the prediction. Note that the *.csv file must follow the set 
+format
 
 ## Input data format, range and description
 
@@ -39,13 +36,13 @@ Parameter | LWL | B | T | L/B | B/T | Disp | CB |Vs | Fn | P |
 Range | 80 - 240 | 15 - 32 | 3 - 8 | 3.5 - 9.0 | 3.0 - 5.5 | 2500 - 32000 | 0.5 - 0.7 | 14.5 - 30.5 | 0.20 - 0.40 | 3000 - 70000 | 
 
 ### Acronym
-- Waterline Length, LWL
-- Breadth, B
-- Draught, T
+- Waterline Length in m, LWL
+- Breadth in m, B
+- Draught in m, T
 - Length-to-Breadth ratio, L/B
 - Breadth-to-Draught ratio, B/T
-- Displacement, Disp
+- Displacement in t, Disp
 - Block Coefficient, CB
-- Service Speed, Vs
+- Service Speed in kn, Vs
 - Froude Number, Fn
-- Brake KiloWatt Power, P
+- Brake KiloWatt Power in kW, P

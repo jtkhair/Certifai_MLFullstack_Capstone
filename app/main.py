@@ -58,6 +58,7 @@ scaler = pickle.load(open("./model/scaler_pwr.sav", 'rb'))
 async def main(request: Request):
     return templates.TemplateResponse("home.html", {"request": request})
 
+# page2
 @app.post("/uploadfile/")
 async def create_upload_file(request: Request, file: UploadFile = File(...)):
     # only accept csv
@@ -107,6 +108,9 @@ async def create_upload_file(request: Request, file: UploadFile = File(...)):
         # Output table
         output_table = df_output.values.tolist()
         output_header = df.columns
+
+        # save to file
+        # df_output.to_csv("./data/output.csv", index=False)
 
         # sample graph
         graph_data = df_output[['Vs', 'P']].values.tolist()
