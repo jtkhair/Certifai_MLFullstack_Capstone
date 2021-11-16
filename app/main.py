@@ -50,7 +50,7 @@ logger.setLevel(logging.DEBUG)
 logging.basicConfig(level=logging.DEBUG, filename="logs.log")
 
 # load model & scaler
-model = pickle.load(open("./model/mlp_pwr_best_model.sav", 'rb'))
+model = pickle.load(open("./model/mlp_pwr_base2_best_model.sav", 'rb'))
 scaler = pickle.load(open("./model/scaler_pwr.sav", 'rb'))
 
 # home page
@@ -110,7 +110,7 @@ async def create_upload_file(request: Request, file: UploadFile = File(...)):
         output_header = df.columns
 
         # save to file
-        # df_output.to_csv("./data/output.csv", index=False)
+        df_output.to_csv("./data/output.csv", index=False)
 
         # sample graph
         graph_data = df_output[['Vs', 'P']].values.tolist()
