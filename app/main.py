@@ -50,7 +50,7 @@ logger.setLevel(logging.DEBUG)
 logging.basicConfig(level=logging.DEBUG, filename="logs.log")
 
 # load model & scaler
-model = pickle.load(open("./model/mlp_pwr_base2_best_model.sav", 'rb'))
+model = pickle.load(open("./model/mlp_pwr_base3_best_model.sav", 'rb'))
 scaler = pickle.load(open("./model/scaler_pwr.sav", 'rb'))
 
 # home page
